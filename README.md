@@ -1,9 +1,8 @@
 # Credit_Risk_Analysis
 
-
 ## Overview of the Analysis
 
-The purpose of this project was to compare a variety of resampling techniques from different machine learning models to assess each model’s performance in predicting outcomes for a target with highly imbalanced, binary classes.  Given a dataset of 68,817 observations from various loans in 2019, the target variable for this analysis was “loan_status”, a notoriously imbalanced target of binary classes, considering low risk loans are generally administered more often than high risk ones.  Once a dataframe was loaded using pandas in a Jupiter Notebook, the “loan_status” column revealed that the value count for each class was such that “high_risk” loans totaled 347 observations and “low_risk” totaled 68,470.  
+The purpose of this project was to compare a variety of techniques from different machine learning models to assess each model’s performance in predicting outcomes for a target with highly imbalanced, binary classes.  Given a dataset of 68,817 observations from various loans in 2019, the target variable for this analysis was “loan_status”, a notoriously imbalanced target of binary classes, considering low risk loans are generally administered more often than high risk ones.  Once a dataframe was loaded using pandas in a Jupiter Notebook, the “loan_status” column revealed that the value count for each class was such that “high_risk” loans totaled 347 observations and “low_risk” totaled 68,470.  
 
 
 Due to the vast imbalance in the two loan status classes, predicting whether a loan status (y) is likely to be high or low risk based on the given features (X) presents extra challenges.  Thus, six techniques from various machine learning models were put to the test to assess each model's ability to overcome these challenges.  The algorithms chosen were derived from imbalanced-learn and scikit-learn libraries.  The resampling techniques involved oversampling (using "naive random" and "SMOTE" oversampling alorithms), undersampling (using "cluster centroid" algorithms) and combinatorial sampling (using SMOTEENN algorithms).  Following these resampling techniques, two ensemble learning techniques were compared (balanced random forest classifier and easy ensemble adabooster classifier). The performance results obtained from each of the six tests are described in detail below.
@@ -39,10 +38,10 @@ To begin the analysis, training and tests variables were split into y (the targe
 
 ## Results
 
-Following is a description of the results from each of the six resampling techniques employed.  The first four techniques described are resampling techniques and the last two were ensembles.  The performances of each technique were analyzed by comparing similar metrics.  The metrics and displays below include an accuracy score, a confusion matrix, and a classification report for each model.  Most notably, in the classificaiton report, one can see the precision and senstivity (recall).  The precision is calculated by (the total number of times high risk was succesfully predicted (true positives) divided by the total time high risk was predicted, succesful or not (the sum of true positives and false positives).  "Recall" or sensitivity is the ratio of true positives to the sum of true postives and false negatives.  You can also see the F1 score (harmonic mean), a measure of the balance between precision and sensitivity, calculated by 2(PxS)/(P+S).
+Following is a description of the results from each of the six resampling techniques employed.  The first four techniques described are resampling techniques and the last two were ensembles.  The performances of each technique were analyzed by comparing similar metrics.  The metrics and displays below include an accuracy score, a confusion matrix, and a classification report for each model.  Most notably, in the classificaiton report, one can see the precision and senstivity (recall).  The precision is calculated by (the total number of times high risk was succesfully predicted (true positives) divided by the total time high risk was predicted, succesful or not (the sum of true positives and false positives).  "Recall" or sensitivity is the ratio of true positives to the sum of true postives and false negatives.  As a bonus, you can also compare the F1 scores ("harmonic means"), a measure of the balance between precision and sensitivity, as calculated by 2(PxS)/(P+S).
 
 
-To begin, the oversampling techniques were employed which essentially seek to rebalance the classification discrepancy by increasing the number of samples from the minority set (high risk loans) until the counts are equal in each target class.
+To begin the analysis, the oversampling techniques were employed which essentially seek to rebalance the classification discrepancy by increasing the number of samples from the minority set (high risk loans) until the counts are equal in each target class.
 
 ### Naive Random Oversampling
 
@@ -101,9 +100,9 @@ Next, the balanced random forest classifier was used to predict credit risk.  Th
 
 ![](images_for_readme/balanced_randomforest_classifier.png)
 
-### Easy Ensemble Adabooster Classifier
+### Easy Ensemble Adaboost Classifier
 
-Lastly, another ensemble learning algorithm was applied known as the easy ensemble adabooster classifier as a final test.  As the name implies, the adabooster is an adaptive booster which models are created in succession and each proceeding model is learns (is "boosted") by giving extra weight to the errors of the preceeding model to minimize errors.  After instantiating the EasyEnsembleClassifier with at least one-hundred estimators, fitting the model to the training data, and comparing the prediction of the target to the actual result, the following results were obtained for predicting high risk loans:
+Lastly, another ensemble learning algorithm was applied known as the easy ensemble adaboost classifier as a final test.  As the name implies, the adabooster is an adaptive booster which models are created in succession and each proceeding model is learns (is "boosted") by giving extra weight to the errors of the preceeding model to minimize errors.  After instantiating the EasyEnsembleClassifier with at least one-hundred estimators, fitting the model to the training data, and comparing the prediction of the target to the actual result, the following results were obtained for predicting high risk loans:
 
 - The balanced accuracy score was about 93%
 - The precision score was about 9%
