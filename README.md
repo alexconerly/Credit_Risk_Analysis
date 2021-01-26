@@ -31,7 +31,7 @@ Software:
 
 ## Preparation:
 
-To begin the analysis, training and tests variables were split into y (the target) and X (the features to predict the target).  The count was taken to reveal the imbalance of the classes as mentioned prior (68,470 low risk and 347 high risk).  Then the X and y were split into 75% for training and the other 25% of the data was reserved for testing the model afterwards.  A comparison for the count before and after the training sets were split can be seen in the following image:
+To begin the analysis, training and tests variables were split into y (the target) and X (the features to predict the target).  The count was taken to reveal the imbalance of the classes as mentioned prior (68,470 low risk and 347 high risk).  Then the X and y were split into 75% for training and the other 25% of the data was reserved for testing the model afterwards.  A comparison for the counts, before and after the training sets were split, can be seen in the following image:
 
 ![](images_for_readme/train_test_split.png)
 
