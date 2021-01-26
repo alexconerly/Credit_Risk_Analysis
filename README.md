@@ -96,7 +96,7 @@ Next, the balanced random forest classifier was used to predict credit risk.  Th
 
 - The balanced accuracy score was about 79%
 - The precision measured at 4%
-- The sensitivity (recall) score was 70%
+- The sensitivity (recall) score was 69%
 
 
 ![](images_for_readme/balanced_randomforest_classifier.png)
