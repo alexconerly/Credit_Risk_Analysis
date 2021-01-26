@@ -95,7 +95,7 @@ After both over and under sampling techniques were trialed, a combination approa
 Next, the balanced random forest classifier was used to predict credit risk.  This is a form of ensemble classifier.  Ensemble learning is a process where multiple weak learner models are combined either at once (bagging) or in sequence (boosting) with the purpose of creating a much stronger learner model to improve predictive power overall.  In this case, the balanced random forest classifier randomly under samples each bootstrap sample in order to balance it.  After instantiating the model with at least one-hundred estimators, fitting it to the trained set, and comparing the resulting prediciton to the y_test, the results of this technique were as follows:
 
 - The balanced accuracy score was about 79%
-- The precision measured at 3%
+- The precision measured at 4%
 - The sensitivity (recall) score was 70%
 
 
