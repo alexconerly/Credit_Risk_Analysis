@@ -40,16 +40,15 @@ To begin the analysis, training and tests variables were split into y (the targe
 
 The performances of each technique were analyzed by comparing similar metrics.  To visualize the metrics an accuracy score, a confusion matrix, and a classification report for each model were obtained.  Most notably, in the classificaiton report, one can see the precision and senstivity ("recall").  The precision is calculated by the total number of times a high risk loan was succesfully predicted (true positive) divided by the total number of times a high risk loan was predicted overall (the sum of true positives and false positives).  "Recall" or sensitivity is the ratio of true positives to the sum of true postives and false negatives.  As a bonus, you can also compare the F1 scores ("harmonic means") in the classificaiton report which is a measure of the balance between precision and sensitivity, as calculated by 2(PxS)/(P+S).
 
-
 To begin the analysis, the oversampling techniques were employed which essentially sought to rebalance the classification discrepancy by increasing the number of samples from the minority set (high risk loans) until the counts are equal in each target class.
 
 ### Naive Random Oversampling
 
-Random oversampling in a process where instances of the minority class get selected randomly and then added back into the training set until the classes are balanced. After instantiating imblearn's RandomOverSampler and fitting and resampling the training datasets the following results were obtained from naive random sampling:
+Random oversampling is a process where instances of the minority class get selected randomly and then added back into the training set until the classes are balanced. After instantiating imblearn's RandomOverSampler and then fitting and resampling the training datasets, the following results were obtained from naive random oversampling:
 
-- The naive random oversampling technique resulted in a balanced accuracy score of about 67%.
-- However, the precision of the model to predict high risk loans is only about 1%.  
-- Finally, the sensitivity (recall) was about 76%
+- The balanced accuracy score was about 67%.
+- The precision of the model to predict high risk loans was only about 1%.  
+- The sensitivity (recall) was about 76%
 
 ![](images_for_readme/random_oversampling.png)
 
@@ -59,7 +58,7 @@ Random oversampling in a process where instances of the minority class get selec
 The second oversampling technique employed was "SMOTE" oversampling, which is an acronym for synthetic minority oversampling.  This technique also adds to the minority class to rebalance with the majority, but, unlike random, SMOTE oversampling increases the minority class by adding synthetic instances.  The values of these synthetic instances are chosen nearby existing values ("neighbors").  After instantiating the SMOTE algorithm to resample the training set, and then applying logistic regression to fit the resampled data and form a prediction of the target based on X_test, this machine learning model resulted in the folliwng metrics:
 
 - The SMOTE technique resulted in a balanced accuracy score of about 66%.
-- The precision of the model to predict high risk loans is only about 1%.  
+- The precision of the model to predict high risk loans was only about 1%.  
 - Finally, the recall was about 63%
 
 ![](images_for_readme/SMOTE.png)
