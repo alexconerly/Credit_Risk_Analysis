@@ -55,7 +55,7 @@ Random oversampling is a process where instances of the minority class get selec
 
 ### SMOTE Oversampling
 
-The second oversampling technique employed was "SMOTE" oversampling, which is an acronym for synthetic minority oversampling.  This technique also adds to the minority class to rebalance with the majority, but, unlike random, SMOTE oversampling increases the minority class by adding synthetic instances.  The values of these synthetic instances are chosen nearby existing values ("neighbors").  After instantiating the SMOTE algorithm to resample the training set, and then applying logistic regression to fit the resampled data and form a prediction of the target based on X_test, this machine learning model resulted in the folliwng metrics:
+The second oversampling technique employed was "SMOTE" oversampling, which is an acronym for synthetic minority oversampling.  This technique also adds samples to the minority class to balance it with the majority, but, unlike random, SMOTE oversampling increases the minority class by using synthetic instances.  The values of these synthetic instances are created nearby existing values ("neighbors").  After instantiating the SMOTE algorithm to resample the training set, and then applying logistic regression to fit the resampled data and form a prediction of the target based on X_test, this machine learning model resulted in the folliwng metrics:
 
 - The SMOTE technique resulted in a balanced accuracy score of about 66%.
 - The precision of the model to predict high risk loans was only about 1%.  
