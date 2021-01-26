@@ -99,18 +99,18 @@ Next, the balanced random forest classifier was used to predict credit risk.  Th
 - The sensitivity (recall) score was 70%
 
 
-![](images_for_readme/balanced_random_forest_classifier.png)
+![](images_for_readme/balanced_randomforest_classifier.png)
 
 ### Easy Ensemble Adabooster Classifier
 
 Lastly, another ensemble learning algorithm was applied known as the easy ensemble adabooster classifier as a final test.  As the name implies, the adabooster is an adaptive booster which models are created in succession and each proceeding model is learns (is "boosted") by giving extra weight to the errors of the preceeding model to minimize errors.  After instantiating the EasyEnsembleClassifier, fitting the model to the training data, and comparing the prediction of the target to the actual result, the following results were obtained for predicting high risk loans:
 
 - The balanced accuracy score was about 79%
-- The precision score was about 3%
+- The precision score was about 9%
 - The sensitivity (recall) was about 70%
 
-![](images_for_readme/easy_ensemble_adabooster_classifier.png)
+![](images_for_readme/adaboost.png)
 
 ## Summary
 
-After all six tests were implemented to compare the resulting metric scores of each technique, all of the models appeared to produce accuracy scores between 54% and 79%, extremely low precision from 1-3%, and sensitivity scores ranging from 63-76%.  From this, we can certainly see that each of the models lacked a great deal of precision in predicting high risk loans.
+After all six tests were implemented to compare the resulting metric scores of each technique, all of the models appeared to produce accuracy scores between 54% and 79%, extremely low precision from 1-9%, and sensitivity scores ranging from 63-76%.  From this, we can certainly see that each of the models lacked suitable precision scores for predicting high risk loans.  That said, many of the parameters for these machine learning models were set to defaults and further adjustments could be made to fine-tune the hyperparamters to make the most of these models.  In any case, for the purposes of this study, these models appeared to lack the robustness needed for reliably predicting high risk loans.
