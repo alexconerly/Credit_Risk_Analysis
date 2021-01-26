@@ -109,6 +109,8 @@ Lastly, another ensemble learning algorithm was applied known as the easy ensemb
 - The precision score was about 3%
 - The sensitivity (recall) was about 70%
 
+![](images_for_readme/easy_ensemble_adabooster_classifier.png)
+
 ## Summary
 
 After all six tests were implemented to compare the resulting metric scores of each technique, all of the models appeared to produce accuracy scores between 54% and 79%, extremely low precision from 1-3%, and sensitivity scores ranging from 63-76%.  From this, we can certainly see that each of the models lacked a great deal of precision in predicting high risk loans.
