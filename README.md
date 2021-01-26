@@ -92,7 +92,7 @@ After both over and under sampling techniques were trialed, a combination approa
 
 ### Balanced Random Forest Classifier
 
-Next, the balanced random forest classifier was used to predict credit risk.  This is a form of ensemble classifier.  Ensemble learning is a process where multiple weak learner models are combined either at once (bagging) or in sequence (boosting) with the purpose of creating a much stronger learner model to improve predictive power overall.  In this case, the balanced random forest classifier randomly under samples each bootstrap sample in order to balance it.  After instantiating the model, fitting it to the trained set, and comparing the resulting prediciton to the y_test, the results of this technique were as follows:
+Next, the balanced random forest classifier was used to predict credit risk.  This is a form of ensemble classifier.  Ensemble learning is a process where multiple weak learner models are combined either at once (bagging) or in sequence (boosting) with the purpose of creating a much stronger learner model to improve predictive power overall.  In this case, the balanced random forest classifier randomly under samples each bootstrap sample in order to balance it.  After instantiating the model with at least one-hundred estimators, fitting it to the trained set, and comparing the resulting prediciton to the y_test, the results of this technique were as follows:
 
 - The balanced accuracy score was about 79%
 - The precision measured at 3%
@@ -103,7 +103,7 @@ Next, the balanced random forest classifier was used to predict credit risk.  Th
 
 ### Easy Ensemble Adabooster Classifier
 
-Lastly, another ensemble learning algorithm was applied known as the easy ensemble adabooster classifier as a final test.  As the name implies, the adabooster is an adaptive booster which models are created in succession and each proceeding model is learns (is "boosted") by giving extra weight to the errors of the preceeding model to minimize errors.  After instantiating the EasyEnsembleClassifier, fitting the model to the training data, and comparing the prediction of the target to the actual result, the following results were obtained for predicting high risk loans:
+Lastly, another ensemble learning algorithm was applied known as the easy ensemble adabooster classifier as a final test.  As the name implies, the adabooster is an adaptive booster which models are created in succession and each proceeding model is learns (is "boosted") by giving extra weight to the errors of the preceeding model to minimize errors.  After instantiating the EasyEnsembleClassifier with at least one-hundred estimators, fitting the model to the training data, and comparing the prediction of the target to the actual result, the following results were obtained for predicting high risk loans:
 
 - The balanced accuracy score was about 79%
 - The precision score was about 9%
@@ -113,4 +113,4 @@ Lastly, another ensemble learning algorithm was applied known as the easy ensemb
 
 ## Summary
 
-After all six tests were implemented to compare the resulting metric scores of each technique, all of the models appeared to produce accuracy scores between 54% and 79%, extremely low precision from 1-9%, and sensitivity scores ranging from 63-76%.  From this, we can certainly see that each of the models lacked suitable precision scores for predicting high risk loans.  That said, many of the parameters for these machine learning models were set to defaults and further adjustments could be made to fine-tune the hyperparamters to make the most of these models.  In any case, for the purposes of this study, these models appeared to lack the robustness needed for reliably predicting high risk loans.
+After all six tests were implemented to compare the resulting metric scores of each technique, all of the models appeared to produce accuracy scores between 54% and 79%, extremely low precision from 1-9%, and sensitivity scores ranging from 63-76%.  From this, we can certainly see that each of the models lacked suitable precision scores for predicting high risk loans.  That said, many of the parameters for these machine learning models were set to defaults and further adjustments could be made to fine-tune the hyperparamters to make the most of these models.  However, for the purposes of this study, these models appeared to lack the robustness needed for reliably predicting high risk loans.
